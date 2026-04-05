@@ -51,6 +51,9 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
 }
 .back-btn:active { opacity:0.7; }
 
+/* Lichte sub-screens: override hub-root muted kleuren */
+#screen-protocol { --muted: #4a5568; --dimmer: #2d3748; }
+
 .screen-inner {
   flex:1; overflow-y:auto;
   -webkit-overflow-scrolling:touch;
@@ -460,7 +463,6 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
   .kaart h3 {
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--tekst);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -576,12 +578,10 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
   }
   .flow-box {
     background: var(--wit);
-    border: 1px solid var(--rand);
     border-radius: 8px;
     padding: 0.5rem 0.6rem;
     font-size: 0.78rem;
     font-weight: 600;
-    color: var(--tekst);
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     text-align: center;
     flex: 1;
@@ -595,9 +595,8 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
   }
   .flow-arrow {
     font-size: 1rem;
-    opacity: 0.7;
+    opacity: 0.4;
     flex-shrink: 0;
-    color: var(--tekst);
   }
   .flow-row.dubbel .flow-box { font-size: 0.72rem; }
 
@@ -2301,7 +2300,7 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
 <header>
   <div class="header-eyebrow">SEIN Epilepsiezorg</div>
   <div class="header-title">Gebouw <span>5</span></div>
-
+  <div class="header-sub">Mobiele werkhulpmiddelen</div>
   <div class="header-time" id="klok">—</div>
 </header>
 
@@ -2666,21 +2665,21 @@ html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#0d11
   <div class="nood-banner">
     <div class="section-title">Noodoproepen via telefoon</div>
     <div class="nood-grid">
-      <div class="nood-item" style="cursor:default;">
+      <div class="nood-item">
         <div class="nood-num">2</div>
-        <div class="nood-label">Testoproep<br><span style="font-size:10px;opacity:0.6;">toets 2 op vaste tel.</span></div>
+        <div class="nood-label">Testoproep</div>
       </div>
-      <div class="nood-item" style="cursor:default;">
+      <div class="nood-item">
         <div class="nood-num">3</div>
-        <div class="nood-label">Agressie oproep<br><span style="font-size:10px;opacity:0.6;">toets 3 op vaste tel.</span></div>
+        <div class="nood-label">Agressie oproep</div>
       </div>
-      <div class="nood-item" style="cursor:default;">
+      <div class="nood-item">
         <div class="nood-num">4</div>
-        <div class="nood-label">Verpleegoproep<br><span style="font-size:10px;opacity:0.6;">toets 4 op vaste tel.</span></div>
+        <div class="nood-label">Verpleegoproep</div>
       </div>
-      <div class="nood-item" style="cursor:default;">
+      <div class="nood-item">
         <div class="nood-num">5</div>
-        <div class="nood-label">D-team Gebouw 7<br><span style="font-size:10px;opacity:0.6;">toets 5 op vaste tel.</span></div>
+        <div class="nood-label">D-team Gebouw 7</div>
       </div>
     </div>
   </div>
